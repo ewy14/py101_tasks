@@ -14,5 +14,19 @@
 Тебе может понадобится модуль random, цикл while и ветвления
 """
 
-if __name__ == '__main__':
-    pass
+chislo = random.randint(1, 1000000)
+i = input('введите число ')
+while chislo != 'выход':
+    if i.isdigit():
+        if 1000000 > int(i) < 1:
+            print('Угадайте число от 1 до 1000000')
+        else:
+            if int(i) < chislo:
+                print('введенное число меньше загаданного')
+            elif int(i) > chislo:
+                print('введенное число больше загаданного')
+            elif int(i) == chislo:
+                print('Вы угадали число, поздравляю')
+        i = input('Попробуйте еще раз')
+    else:
+        i = input('Выбор только из чисел, введите число')
